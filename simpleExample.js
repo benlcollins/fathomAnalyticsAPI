@@ -20,10 +20,9 @@ function getFathomSites() {
   
   // set params for API call
   const params = {
-    'method': 'GET',
-    'muteHttpExceptions': true,
-    'headers': {
-      'Authorization': 'Bearer ' + FATHOM_API_KEY
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + FATHOM_API_KEY
     }
   };
   
