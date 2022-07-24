@@ -1,20 +1,13 @@
 /**
  * Global variables
  */
-const API_KEY = getApiKey();
-
-/**
- * function to get my Fathom API Key from properties service
- */
-function getApiKey() {
-  return PropertiesService.getScriptProperties().getProperty('fathomKey');
-}
+const FATHOM_API_KEY = ScriptProperties.getProperty('fathomKey');
 
 /**
  * function to test script properties
  */
 function test(){
-  console.log(API_KEY);
+  console.log(FATHOM_API_KEY);
 }
 
 /**
@@ -30,7 +23,7 @@ function getFathomSites() {
     'method': 'GET',
     'muteHttpExceptions': true,
     'headers': {
-      'Authorization': 'Bearer ' + API_KEY
+      'Authorization': 'Bearer ' + FATHOM_API_KEY
     }
   };
   
