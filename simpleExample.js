@@ -4,13 +4,6 @@
 const FATHOM_API_KEY = ScriptProperties.getProperty('fathomKey');
 
 /**
- * function to test script properties
- */
-function test(){
-  console.log(FATHOM_API_KEY);
-}
-
-/**
  * function to retrieve list of sites from Fathom API
  */
 function getFathomSites() {
